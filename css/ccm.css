@@ -1,0 +1,85 @@
+body {
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+.jumbo {
+    height: 520px;
+    background-image: linear-gradient(to right, #007398, #00c1b6);
+    padding-top: 30px;
+}
+
+.logo-container {
+    margin-bottom: 30px;
+}
+
+.logo {
+    margin-right: 30px;
+    display: inline-block;
+}
+
+.jumbo  h1 {
+    text-shadow: 0 5px 4px #4a4a4a;
+    font-size: 42px;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.jumbo  h2 {
+
+    text-shadow: 0 5px 4px #4a4a4a;
+    font-size: 34px;
+    color: #ffffff;
+}
+
+.jumbo  h3 {
+    text-shadow: 0 5px 4px #4a4a4a;
+    font-size: 28px;
+    color: #ffffff;
+}
+
+.section-title {
+    background-image: linear-gradient(to right, #007398, #00c1b6);
+    height: 90px;
+    padding: 15px;
+}
+
+.section-title .title {
+    font-size: 38px;
+    color: #ffffff;
+
+}
+
+.section-content {
+    border: solid 1px #007398;
+    padding: 15px;
+}
+
+.section-content .title {
+    font-size: 38px;
+    font-weight: bold;
+    color: #007398;
+}
+.info-circle {
+    border: solid 4px #007398;
+    font-size: 42px;
+    color: #007398;
+    border-radius: 50%;
+    padding: 10px;
+}
+
+.info-text {
+    font-size: 42px;
+    color: #007398;
+    line-height: normal;
+}
+
+.info-number {
+    font-size: 38px;
+    font-weight: bold;
+    color: #007398;
+}
+
+.info-text-secondary {
+  font-size: 28px;
+  color: #242424;
+}
