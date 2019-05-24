@@ -7,9 +7,46 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-     <link rel="stylesheet" href="css/ccm.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/ccm.css">
 
     <title>Informe Dr. Daniel Juan</title>
+
+      <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+      <script type="text/javascript">
+
+          google.charts.load('current', {'packages':['bar']});
+          // Set a callback to run when the Google Visualization API is loaded.
+          google.charts.setOnLoadCallback(drawChart);
+
+          // Callback that creates and populates a data table,
+          // instantiates the pie chart, passes in the data and
+          // draws it.
+          function drawChart() {
+
+              // Create the data table.
+              var data = google.visualization.arrayToDataTable([
+                  ['Año', 'Artículos de Investigación'],
+                  ['2016', 34],
+                  ['2017', 37],
+                  ['2018', 39],
+                  ['2019', 35]
+              ]);
+
+              var options = {
+                  chart: {
+                      title: 'Centro de Ciencias Matemáticas 2016-2019'
+                  },
+                  bar: {groupWidth: "60%"},
+                  isStacked: true
+              };
+
+              var chart = new google.charts.Bar(document.getElementById('chart_div'));
+
+              chart.draw(data, google.charts.Bar.convertOptions(options));
+          }
+
+      </script>
   </head>
   <body>
 
@@ -24,124 +61,199 @@
       </div>
   </div>
 
-  <div class="container mt-5">
-      <div class="section-title">
-          <div class="title">Investigación</div>
-      </div>
-  </div>
 
-  <div class="container">
-      <div class="section-content">
-          <div class="row my-5">
-              <div class="col-md-6">
-                  <div class="info-container">
-                    <span class="info-circle">29</span> <div class="info-text">Académicos</div>
-                  </div>
-              </div>
-              <div class="col-md-6">
-                  <div class="info-container">
-                    <span class="info-circle">12</span> <div class="info-text">Líneas de<br> investigación</div>
-                  </div>
-              </div>
-          </div>
-          <div class="row">
-              <div class="col-md-6">
-                  <table>
-                      <tr>
-                          <td class="text-center"><span class="info-number">23</span></td><td><span class="info-text-secondary">Investigadores</span></td>
-                      </tr>
-                      <tr>
-                          <td class="text-center"><span class="info-number">6</span></td><td><span class="info-text-secondary">Técnicos Académicos</span></td>
-                      </tr>
-                  </table>
-              </div>
-              <div class="col-md-6">
-                  <div class="info-container">
-                    <span class="info-circle">12</span> <div class="info-text">Proyectos de<br>investigación</div>
-                  </div>
-              </div>
-          </div>
-          <div class="text-right my-5">
-              <a href="academicos.html" class="btn btn-outline-primary" role="button" aria-pressed="true">Ver detalle</a>
-          </div>
-      </div>
-  </div>
-  <div class="container">
-      <div class="section-content">
-          <div class="title py-3">Producción Primaria</div>
-          <div class="row mt-4">
-              <div class="col-md-6">
-                  <div class="info-container">
-                    <span class="info-circle">50</span> <div class="info-text">Artículos de<br> investigación</div>
-                  </div>
-              </div>
-              <div class="col-md-6">
-                  <table>
-                      <tr>
-                          <td class="text-center"> <span class="info-number">30</span></td><td><span class="info-text-secondary">Artículos</span></td>
-                      </tr>
-                      <tr>
-                          <td class="text-center"><span class="info-number">6</span></td><td><span class="info-text-secondary">Capítulos de libro</span></td>
-                      </tr>
+<div class="container">
+    <h1 class="display-4 font-weight-bold mt-5">
+        Investigación
+    </h1>
+    <p class="lead font-weight-bold">Lineas de Investigación Institucionales y Proyectos de Investigación</p>
+    <div class="row my-5">
+        <div class="col-md-6 col-sm-12">
+            <h1 class="display-2 d-inline-block"><strong>29</strong></h1> <span class="info-text">Académicos</span>
+        </div>
+        <div class="col-md-6 col-sm-12">
+            <h1 class="display-2 d-inline-block"><strong>23</strong></h1> <span class="info-text">SNI</span>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6 col-sm-12">
+            <table>
+                <tr>
+                    <td class="text-center"><span class="info-number">23</span></td><td><span class="info-text-secondary">Investigadores</span></td>
+                </tr>
+                <tr>
+                    <td class="text-center"><span class="info-number">1</span></td><td><span class="info-text-secondary">Investigador Emérito</span></td>
+                </tr>
+                <tr>
+                    <td class="text-center"><span class="info-number">6</span></td><td><span class="info-text-secondary">Técnicos Académicos</span></td>
+                </tr>
+            </table>
+        </div>
+        <div class="col-md-6 col-sm-12">
+             <h1 class="display-2 d-inline-block"><strong>8</strong></h1> <span class="info-text">Proyectos de Investigación</span>
+        </div>
+    </div>
 
-                  </table>
-              </div>
-          </div>
-          <div class="text-right my-5">
-              <button type="button" class="btn btn-outline-primary">Ver detalle</button>
-          </div>
-      </div>
-  </div>
-  <div class="container">
-      <div class="section-content">
-          <div class="title py-3">Intercambio Académico</div>
-          <div class="row mt-4">
-              <div class="col-md-6 text-center">
-                  <div class="info-container">
-                    <span class="info-circle">40</span> <div class="info-text">Salidas</div>
-                  </div>
-              </div>
-              <div class="col-md-6 text-center">
-                  <div class="info-container">
-                    <span class="info-circle">35</span> <span class="info-text">Visitas</span>
-                  </div>
-              </div>
-          </div>
-          <div class="text-right my-5">
-              <button type="button" class="btn btn-outline-primary">Ver detalle</button>
-          </div>
-      </div>
-  </div>
+    <div class="my-5"><a href="academicos.html" class="btn btn-outline-primary" role="button" aria-pressed="true">Ver detalle</a></div>
+
+    <h1 class="display-4 font-weight-bold mt-5">Producción Primaria</h1>
+    <div class="row my-5">
+        <div class="col-md-12 col-sm-12">
+            <h1 class="display-2 d-inline-block"><strong>150</strong></h1> <span class="info-text">Artículos de Investigación</span>
+        </div>
+    </div>
+    <div class="row mt-5">
+        <div class="col-md-6 col-sm-12">
+            <table class="row">
+                <tr>
+                    <td class="text-center"><span class="info-number">11</span></td><td><span class="info-text-secondary">Artículos de Divulgación</span></td>
+                </tr>
+                <tr>
+                    <td class="text-center"><span class="info-number">4</span></td><td><span class="info-text-secondary">Libros</span></td>
+                </tr>
+                <tr>
+                    <td class="text-center"><span class="info-number">7</span></td><td><span class="info-text-secondary">Capítulos de Libro</span></td>
+                </tr>
+            </table>
+        </div>
+        <div class="col-md-6 col-sm-12">
+            <div id="chart_div"  style="width: 100%px;"></div>
+        </div>
+    </div>
+    <div class="row my-5">
+        <div class="col-md-6 col-sm-12">
+            <h1 class="display-2 d-inline-block"><strong>90</strong></h1> <span class="info-text">Revistas</span>
+
+        </div>
+        <div class="col-md-6 col-sm-12">
+            <h1 class="display-2 d-inline-block"><strong>24</strong></h1> <span class="info-text">Países</span>
+        </div>
+
+    </div>
+    <div class="my-5"><a href="academicos.html" class="btn btn-outline-primary" role="button" aria-pressed="true">Ver detalle</a></div>
+</div>
 
 
+  <!--<div class="container mt-5">-->
+      <!--<div class="section-title">-->
+          <!--<div class="title">Investigación</div>-->
+      <!--</div>-->
+  <!--</div>-->
+  <!--<div class="container">-->
+      <!--<div class="section-content">-->
+          <!--<div class="row my-5">-->
+              <!--<div class="col-md-6">-->
+                  <!--<div class="info-container">-->
+                    <!--<span class="info-circle">29</span> <div class="info-text">Académicos</div>-->
+                  <!--</div>-->
+              <!--</div>-->
+              <!--<div class="col-md-6">-->
+                  <!--<div class="info-container">-->
+                    <!--<span class="info-circle">12</span> <div class="info-text">Líneas de<br> investigación</div>-->
+                  <!--</div>-->
+              <!--</div>-->
+          <!--</div>-->
+          <!--<div class="row">-->
+              <!--<div class="col-md-6">-->
+                  <!--<table>-->
+                      <!--<tr>-->
+                          <!--<td class="text-center"><span class="info-number">1</span></td><td><span class="info-text-secondary">Emérito</span></td>-->
+                      <!--</tr>-->
+                      <!--<tr>-->
+                          <!--<td class="text-center"><span class="info-number">22</span></td><td><span class="info-text-secondary">Investigadores</span></td>-->
+                      <!--</tr>-->
+                      <!--<tr>-->
+                          <!--<td class="text-center"><span class="info-number">6</span></td><td><span class="info-text-secondary">Técnicos Académicos</span></td>-->
+                      <!--</tr>-->
+                  <!--</table>-->
+              <!--</div>-->
+              <!--<div class="col-md-6">-->
+                  <!--<div class="info-container">-->
+                    <!--<span class="info-circle">12</span> <div class="info-text">Proyectos de<br>investigación</div>-->
+                  <!--</div>-->
+              <!--</div>-->
+          <!--</div>-->
+          <!--<div class="text-right my-5">-->
+              <!--<a href="academicos.html" class="btn btn-outline-primary" role="button" aria-pressed="true">Ver detalle</a>-->
+          <!--</div>-->
+      <!--</div>-->
+  <!--</div>-->
+  <!--<div class="container">-->
+      <!--<div class="section-content">-->
+          <!--<div class="title py-3">Producción Primaria</div>-->
+          <!--<div class="row mt-4">-->
+              <!--<div class="col-md-6">-->
+                  <!--<div class="info-container">-->
+                    <!--<span class="info-circle">50</span> <div class="info-text">Artículos de<br> investigación</div>-->
+                  <!--</div>-->
+              <!--</div>-->
+              <!--<div class="col-md-6">-->
+                  <!--<table>-->
+                      <!--<tr>-->
+                          <!--<td class="text-center"> <span class="info-number">30</span></td><td><span class="info-text-secondary">Artículos</span></td>-->
+                      <!--</tr>-->
+                      <!--<tr>-->
+                          <!--<td class="text-center"><span class="info-number">6</span></td><td><span class="info-text-secondary">Capítulos de libro</span></td>-->
+                      <!--</tr>-->
 
-  <div class="container mt-5">
-      <div class="section-title">
-          <div class="title">Docencia</div>
-      </div>
-      <div class="section-content">
-          <div class="row mt-4">
-              <div class="col-md-6">
-                  <div class="info-container">
-                    <span class="info-circle">15</span><div class="info-text">Doctorados</div>
-                  </div>
-              </div>
-              <div class="col-md-6">
-                  <table>
-                      <tr>
-                          <td class="text-center"><span class="info-number">10</span></td><td><span class="info-text-secondary">Doctorado</span></td>
-                      </tr>
-                      <tr>
-                          <td class="text-center"><span class="info-number">25</span></td><td><span class="info-text-secondary">Maestría</span></td>
-                      </tr>
-                  </table>
-              </div>
-          </div>
-          <div class="text-right my-5">
-              <button type="button" class="btn btn-outline-primary">Ver detalle</button>
-          </div>
-      </div>
-  </div>
+                  <!--</table>-->
+              <!--</div>-->
+          <!--</div>-->
+          <!--<div class="text-right my-5">-->
+              <!--<button type="button" class="btn btn-outline-primary">Ver detalle</button>-->
+          <!--</div>-->
+      <!--</div>-->
+  <!--</div>-->
+  <!--<div class="container">-->
+      <!--<div class="section-content">-->
+          <!--<div class="title py-3">Intercambio Académico</div>-->
+          <!--<div class="row mt-4">-->
+              <!--<div class="col-md-6 text-center">-->
+                  <!--<div class="info-container">-->
+                    <!--<span class="info-circle">40</span> <div class="info-text">Salidas</div>-->
+                  <!--</div>-->
+              <!--</div>-->
+              <!--<div class="col-md-6 text-center">-->
+                  <!--<div class="info-container">-->
+                    <!--<span class="info-circle">35</span> <span class="info-text">Visitas</span>-->
+                  <!--</div>-->
+              <!--</div>-->
+          <!--</div>-->
+          <!--<div class="text-right my-5">-->
+              <!--<button type="button" class="btn btn-outline-primary">Ver detalle</button>-->
+          <!--</div>-->
+      <!--</div>-->
+  <!--</div>-->
+
+
+
+  <!--<div class="container mt-5">-->
+      <!--<div class="section-title">-->
+          <!--<div class="title">Docencia</div>-->
+      <!--</div>-->
+      <!--<div class="section-content">-->
+          <!--<div class="row mt-4">-->
+              <!--<div class="col-md-6">-->
+                  <!--<div class="info-container">-->
+                    <!--<span class="info-circle">15</span><div class="info-text">Doctorados</div>-->
+                  <!--</div>-->
+              <!--</div>-->
+              <!--<div class="col-md-6">-->
+                  <!--<table>-->
+                      <!--<tr>-->
+                          <!--<td class="text-center"><span class="info-number">10</span></td><td><span class="info-text-secondary">Doctorado</span></td>-->
+                      <!--</tr>-->
+                      <!--<tr>-->
+                          <!--<td class="text-center"><span class="info-number">25</span></td><td><span class="info-text-secondary">Maestría</span></td>-->
+                      <!--</tr>-->
+                  <!--</table>-->
+              <!--</div>-->
+          <!--</div>-->
+          <!--<div class="text-right my-5">-->
+              <!--<button type="button" class="btn btn-outline-primary">Ver detalle</button>-->
+          <!--</div>-->
+      <!--</div>-->
+  <!--</div>-->
 
   <footer class="footer">
       <div class="container">
@@ -163,10 +275,11 @@
   </footer>
 
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
   </body>
 </html>
