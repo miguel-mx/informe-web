@@ -26,12 +26,6 @@ body {
     padding-top: 30px;
 }
 
-.header {
-    height: 260px;
-    background-image: linear-gradient(to right, #225e96, #00c1b6);
-    padding-top: 30px;
-}
-
 .jumbo h1 {
     text-shadow: 0 5px 4px #4a4a4a;
     font-size: 42px;
@@ -50,6 +44,12 @@ body {
     text-shadow: 0 5px 4px #4a4a4a;
     font-size: 28px;
     color: #ffffff;
+}
+
+.header {
+    height: 260px;
+    background-image: linear-gradient(to right, #225e96, #00c1b6);
+    padding-top: 30px;
 }
 
 .header h1 {
@@ -81,6 +81,11 @@ body {
     display: inline-block;
 }
 
+.display-2 {
+    display: inline-block!important;
+    margin-right: 30px;
+}
+
 .section-title {
     background-image: linear-gradient(to right, #225e96, #00c1b6);
     height: 90px;
@@ -106,7 +111,6 @@ body {
 
 .info-container {
     display:flex;
-    flex-drection:row;
     margin-top: auto;
 }
 
@@ -136,11 +140,11 @@ body {
 }
 
 .info-text {
-    /*display: flex;*/
+    display: inline-block!important;
     font-size: 42px;
     color: #225e96;
     line-height: normal;
-    margin-left: 30px;
+    vertical-align: center;
     /*margin-top: auto;*/
 }
 
@@ -156,6 +160,17 @@ body {
     /*color: #454545;*/
     color: #5d5d5d;
     margin-left: 45px;
+}
+
+.journal {
+    height: 180px;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+#journal-worldmap {
+    width: 100%;
+    height: 200px;
 }
 
 .footer {
@@ -201,4 +216,76 @@ body {
 .footer-logo {
     height: 50px;
     margin-right: 20px;
+}
+
+@media only screen and (max-width: 576px) {
+
+    .jumbo h1 {
+        font-size: 26px;
+    }
+
+    .jumbo h2 {
+        font-size: 22px;
+    }
+
+    .jumbo h3 {
+        font-size: 18px;
+    }
+
+    .header {
+        height: 260px;
+    }
+
+    .header h1 {
+        font-size: 36px;
+    }
+
+    .header h2 {
+        font-size: 32px;
+    }
+
+    .display-2 {
+        display: block!important;
+        margin-top: 1.2rem;
+        text-align: center;
+    }
+
+    .display-4 {
+        display: flex;
+        font-size: 2.6rem;
+    }
+
+    .info-text {
+        display: block!important;
+        text-align: center;
+        font-size: 36px;
+        margin-left: 0px;
+        margin-bottom: 1.2rem;
+    }
+
+    .info-text-secondary {
+        font-size: 22px;
+        margin-left: 20px;
+    }
+
+    .info-number {
+        font-size: 32px;
+        margin-left: 10px;
+    }
+
+    .lead {
+        font-size: 1rem;
+    }
+
+    .logo {
+        margin-right: 10px;
+    }
+
+    .footer {
+        margin-top: 15px;
+        height: 150px;
+        min-height: 180px;
+        padding: 10px;
+    }
+
 }

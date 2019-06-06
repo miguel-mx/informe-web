@@ -30,10 +30,10 @@
     <p>Lineas de Investigación Institucionales y Proyectos de Investigación</p>
     <div class="row my-5">
         <div class="col-md-6 col-sm-12">
-            <h1 class="display-2 d-inline-block"><strong>29</strong></h1> <span class="info-text">Académicos</span>
+            <h1 class="display-2"><strong>29</strong></h1> <span class="info-text">Académicos</span>
         </div>
         <div class="col-md-6 col-sm-12">
-            <h1 class="display-2 d-inline-block"><strong>23</strong></h1> <span class="info-text">SNI</span>
+            <h1 class="display-2"><strong>23</strong></h1> <span class="info-text">SNI</span>
         </div>
     </div>
     <table>
@@ -297,9 +297,15 @@
         </tbody>
     </table>
 
-    <div id="columnchart_material" class="my-5" style="width: 100%; height: 400px;"></div>
+    <div id="columnchart_material" class="mt-5" style="width: 100%; height: 400px;"></div>
 
-    <h1 class="mt-5">Áreas de investigación</h1>
+    <div class="row">
+        <div class="col-md-6 col-sm-12">
+            <div id="piechart" style="width: 100%; height: 500px;"></div>
+        </div>
+    </div>
+
+    <h1 class="mb-5">Áreas de investigación</h1>
 
     <p class="my-4">En el CCM se realiza investigación en las siguientes	áreas de las matemáticas:</p>
 
@@ -426,7 +432,7 @@
             ['2016', 24, 11, 4],
             ['2017', 21, 8, 6],
             ['2018', 22, 12, 6],
-            ['2019', 22, 15, 6]
+            ['2019', 23, 15, 6]
         ]);
 
         var options = {
@@ -444,6 +450,31 @@
     }
 </script>
 
+
+<script type="text/javascript">
+    google.charts.load('current', {'packages':['corechart']});
+    google.charts.setOnLoadCallback(drawChart);
+
+    function drawChart() {
+
+        var data = google.visualization.arrayToDataTable([
+            ['Nivel SNI', 'Investigadores'],
+            ['Candidato', 2],
+            ['Nivel I', 5],
+            ['Nivel II',  8],
+            ['Nivel III', 7],
+            ['Emérito', 1]
+        ]);
+
+        var options = {
+            title: 'Distribución de Investigadores por Nivel de SNI'
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+        chart.draw(data, options);
+    }
+</script>
 
 
 </body>
